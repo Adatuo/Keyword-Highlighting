@@ -5,6 +5,9 @@ import path from 'path';
 export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   srcDir: 'src',
+  manifest: {
+    permissions: ['sidePanel', 'tabs', 'storage'],
+  },
   vite: () => ({
     plugins: [tailwindcss()],
     resolve: {
